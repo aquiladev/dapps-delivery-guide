@@ -45,7 +45,7 @@ jobs:
     - name: Build
       run: |
         $output = '${{ steps.block.outputs.output }}' | ConvertFrom-Json
-        ($env:REACT_APP_NOT_SECRET_CODE = "$($output.data.result)") -and (npm run build)
+        ($env:REACT_APP_BLOCK = "$($output.data.result)") -and (npm run build)
       shell: pwsh
     
     - name: Upload to IPFS
