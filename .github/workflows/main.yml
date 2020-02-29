@@ -44,7 +44,7 @@ jobs:
 
     - name: Build
       run: |
-        $output = ${{ steps.block.outputs.output }}
+        output = ${{ steps.block.outputs.output }}
         echo $output
     
     - name: Upload to IPFS
