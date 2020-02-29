@@ -24,6 +24,7 @@ jobs:
       run: |
         $output = '${{ steps.webhook.outputs.output }}' | ConvertFrom-Json
         Write-Host "Time from output $($output.time) statusCode $($output.statusCode) data $($output.data)"
+      shell: pwsh
       
     - name: Run a multi-line script
       run: |
