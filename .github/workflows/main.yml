@@ -12,20 +12,45 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
-    - name: Web Request Action
-      id: webhook
+    
+    - name: Request Block
+      id: block
       uses: Satak/webrequest-action@v1.2.2
       with:
         url: https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=${{ secrets.ETHERSCAN_KEY }}
         method: GET
      
-    - name: Run 
+    - name: Parse
+      id: parser
       run: |
-        $output = '${{ steps.webhook.outputs.output }}' | ConvertFrom-Json
+        $output = '${{ steps.block.outputs.output }}' | ConvertFrom-Json
         Write-Host "Time from output $($output.time) statusCode $($output.statusCode) data $($output.data)"
       shell: pwsh
-      
-    - name: Run a multi-line script
+  
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+          
+    - run: npm ci
+
+    - name: Build
       run: |
-        echo $output.statusCode
+        $output = '${{ steps.block.outputs.output }}' | ConvertFrom-Json
+        export REACT_APP_BLOCK=$($output.data.result) && npm run build
+      shell: pwsh
+    
+    - name: Upload to IPFS
+      uses: aquiladev/ipfs-action@v0.1.1
+      id: upload
+      with:
+        path: ./build
+        verbose: true
