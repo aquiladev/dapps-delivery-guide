@@ -44,9 +44,8 @@ jobs:
 
     - name: Build
       run: |
-        $output = '${{ steps.block.outputs.output }}' | ConvertFrom-Json
-        export REACT_APP_BLOCK=$($output.data.result) && npm run build
-      shell: pwsh
+        $output = toJson(${{ steps.block.outputs.output }}
+        echo $output
     
     - name: Upload to IPFS
       uses: aquiladev/ipfs-action@v0.1.1
