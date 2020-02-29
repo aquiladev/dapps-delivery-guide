@@ -44,8 +44,8 @@ jobs:
 
     - name: Build
       run: |
-        $output1 = ${{ steps.block.outputs.output.data.result }}
-        echo $output1
+        $output = ${{ steps.block.outputs.output }}
+        echo $output
     
     - name: Upload to IPFS
       uses: aquiladev/ipfs-action@v0.1.1
