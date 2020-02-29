@@ -53,6 +53,8 @@ jobs:
       id: upload
       with:
         path: ./build
+        host: ipfs.komputing.org
+        port: 443
         verbose: true
         timeout: 120000
     
