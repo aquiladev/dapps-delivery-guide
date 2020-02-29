@@ -13,10 +13,18 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
-    - name: Run a one-line script
-      run: echo Hello, world!
+    - name: Web Request Action
+      id: webhook
+      uses: Satak/webrequest-action@v1.2.2
+      with:
+        url: https://api.etherscan.io/api?module=proxy&action=eth_blockNumber&apikey=${{ secrets.ETHERSCAN_KEY }}
+        method: GET
+     
+    - name: Run 
+      run: |
+        $output = '${{ steps.webhook.outputs.output }}' | ConvertFrom-Json
+        Write-Host "Time from output $($output.time) statusCode $($output.statusCode) data $($output.data)"
       
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        echo $output.statusCode
