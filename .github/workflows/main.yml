@@ -54,7 +54,7 @@ jobs:
       with:
         path: ./build
         verbose: true
-        timeout: 1000
+        timeout: 300000
     
     - name: Update DDNS
       uses: aquiladev/ddns-action@v0.1.0
