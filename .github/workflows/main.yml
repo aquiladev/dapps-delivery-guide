@@ -44,8 +44,8 @@ jobs:
 
     - name: Build
       run: |
-        output = ${{ steps.block.outputs.output }}
-        echo $output
+        $output = '${{ steps.block.outputs.output }}' | ConvertFrom-Json
+        ($env:REACT_APP_NOT_SECRET_CODE = "$($output.data.result)") -and (npm run build)
     
     - name: Upload to IPFS
       uses: aquiladev/ipfs-action@v0.1.1
