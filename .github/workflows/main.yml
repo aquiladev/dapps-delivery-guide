@@ -44,8 +44,6 @@ jobs:
 
     - name: Build
       run: |
-        $output = toJson(${{ steps.block.outputs.output }})
-        echo $output
         $output1 = ${{ steps.block.outputs.output.data.result }}
         echo $output1
     
