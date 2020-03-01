@@ -81,9 +81,16 @@ class App extends Component {
       .toString();
 
     return (
-      <h1>
-        {diffBlocks} block(s) to Ethereum {net.type === 'mainnet' ? 'Mainnet' : `${net.name}`} since last update
-      </h1>
+      <>
+        {net.type === 'mainnet' ?
+          <h1>
+            {diffBlocks} block(s) to Ethereum {net.type === 'mainnet' ? 'Mainnet' : `${net.name}`} since last update
+          </h1> :
+          <h1>
+            Change network to Mainnet
+          </h1>
+        }
+      </>
     );
   }
 }
