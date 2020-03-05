@@ -58,11 +58,20 @@ jobs:
         verbose: true
         timeout: 120000
     
-    - name: Update DDNS
+    - name: Update ENS
       uses: aquiladev/ddns-action@v0.1.1-alpha
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
         name: ddns-action.eth
+        contentHash: ${{ steps.upload.outputs.hash }}
+        verbose: true
+    
+    - name: Update CNS
+      uses: aquiladev/ddns-action@v0.1.1-alpha
+      with:
+        mnemonic: ${{ secrets.MNEMONIC }}
+        rpc: ${{ secrets.RPC }}
+        name: ddns-action.crypto
         contentHash: ${{ steps.upload.outputs.hash }}
         verbose: true
