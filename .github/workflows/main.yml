@@ -55,7 +55,7 @@ jobs:
       with:
         path: ./build
         verbose: true
-        timeout: 120000
+        timeout: 240000
     
     - name: Update ENS
       uses: aquiladev/ddns-action@v0.1.1
