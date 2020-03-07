@@ -49,7 +49,6 @@ jobs:
       shell: pwsh
     
     - name: Upload to IPFS
-      timeout-minutes: 2
       uses: aquiladev/ipfs-action@v0.1.2-alpha
       id: upload
       with:
