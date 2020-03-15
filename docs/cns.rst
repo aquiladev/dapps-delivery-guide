@@ -82,7 +82,7 @@ Requirements
 
 1. Before setting up a pipeline the CNS name should be configured, it should have a resolver. Take a look on prev section
 
-2. `Basic pipeline <github-actions>`_ should be configured with `step which provides IPFS hash <ipfs>`_
+2. `Basic pipeline <github-actions#basic-pipeline-for-a-dapp>`_ should be configured with `step which provides IPFS hash <ipfs>`_
 
 Pipeline step
 *************
@@ -162,8 +162,8 @@ You can open all pipeline runs and check outputs
 .. image:: assets/github-pipeline-details.png
     :align: center
 
-How to access a DApp after .CRYPTO update
-=========================================
+How to access a DApp with .CRYPTO name?
+=======================================
 
 Check CNS record
 ****************

@@ -13,10 +13,6 @@ Web3 epoch
 ----------
 Web3 is our nearest future which is still under construction.
 
-Contents:
-
-:ref:`Keyword Index <genindex>`, :ref:`Search Page <search>`
-
 .. toctree::
    :maxdepth: 2
    :caption: Delivery tools
@@ -28,7 +24,9 @@ Contents:
    :maxdepth: 2
    :caption: Hosting
 
+   decentralised-storage
    ipfs
+   swarm
 
 .. toctree::
    :maxdepth: 2
@@ -42,3 +40,7 @@ Contents:
    :caption: Read more
 
    references
+
+Contents:
+
+:ref:`Keyword Index <genindex>`, :ref:`Search Page <search>`

@@ -32,10 +32,10 @@ Open GitHub repository -> Actions -> `New Workflow` -> `Set up a workflow yourse
 .. image:: assets/create-pipeline.png
     :align: center
 
-Step 2: Modify `main.yml` file
-******************************
+Step 2: Modify pipeline
+***********************
 
-* Define a trigger of the pipeline (e.g. only on `master` branch)::
+1. Define a trigger of the pipeline (e.g. only on `master` branch)::
 
     on:
       push:
@@ -43,14 +43,14 @@ Step 2: Modify `main.yml` file
         - master
 
 
-* Leave the definition of the job and run environment::
+2. Leave the definition of the job and run environment::
 
     jobs:
       build:
         runs-on: ubuntu-latest
 
 
-* Define prep-steps::
+3. Define prep-steps::
 
     steps:
       - uses: actions/checkout@v2

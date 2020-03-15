@@ -14,7 +14,7 @@ IPFS allows users to not only receive but host content, in a similar manner to B
 Upload to IPFS
 --------------
 
-There is a GitHub Action which allows to `upload a DApp to IPFS <https://github.com/marketplace/actions/upload-to-ipfs>`_ on Marketplace.
+There is a `GitHub Action <https://github.com/marketplace/actions/upload-to-ipfs>`_ which allows to upload a DApp to IPFS on Marketplace.
 
 In order to use it, you need to add step to `main.yml`.::
 
@@ -23,6 +23,6 @@ In order to use it, you need to add step to `main.yml`.::
       with:
         path: ./build
 
-There will be a build artifact on a runner after `steps <github-actions>`_ (usually in directory `build` or `dist`). You need to pass the directory as a `path` parameter.
+There will be a build artifact on a runner after `steps <github-actions.html#basic-pipeline-for-a-dapp>`_ (usually in directory `build` or `dist`). You need to pass the directory as a `path` parameter.
 
 The step will have `hash` output — it is needed for later use. Token `${{ steps.upload.outputs.hash }}` can be used in next steps where `upload` is the id of current step.
