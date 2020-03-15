@@ -19,7 +19,26 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Guide
+   :caption: Delivery tools
 
-   getting-started
+   github-actions
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Hosting
+
+   ipfs
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Domain names
+
+   ens
+   cns
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Read more
+
    references
