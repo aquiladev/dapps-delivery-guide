@@ -10,7 +10,7 @@ Upload to Swarm
 
 There is a `GitHub Action <https://github.com/marketplace/actions/upload-to-swarm>`_ which allows to upload a DApp to Swarm on Marketplace.
 
-In order to use it, you need to add step to `main.yml`.::
+In order to use it, you need to add step to `main.yml`::
 
     - uses: aquiladev/swarm-action@v0.1.1
       id: upload

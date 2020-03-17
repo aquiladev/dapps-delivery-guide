@@ -14,11 +14,9 @@ Web3 epoch
 Web3 is our nearest future which is still under construction.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Delivery tools
+   :maxdepth: 3
 
-   github-actions
-
+   delivery/index.rst
 
 .. toctree::
    :maxdepth: 2

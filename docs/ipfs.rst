@@ -16,7 +16,7 @@ Upload to IPFS
 
 There is a `GitHub Action <https://github.com/marketplace/actions/upload-to-ipfs>`_ which allows to upload a DApp to IPFS on Marketplace.
 
-In order to use it, you need to add step to `main.yml`.::
+In order to use it, you need to add step to `main.yml`::
 
     - uses: aquiladev/ipfs-action@v0.1.1
       id: upload
