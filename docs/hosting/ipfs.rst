@@ -3,7 +3,7 @@
 IPFS
 ====
 
-.. image:: assets/ipfs.png
+.. image::  ../assets/ipfs.png
     :width: 120px
     :align: center
 

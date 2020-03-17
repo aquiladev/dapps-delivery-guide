@@ -3,7 +3,7 @@
 GitHub and GitHub Actions
 =========================
 
-.. image:: assets/github-os.jpg
+.. image:: ../assets/github-os.jpg
     :width: 280px
     :align: center
 
@@ -13,7 +13,7 @@ A `decentralized application <https://en.wikipedia.org/wiki/Decentralized_applic
 
 Many DApps are open-sourced, most of them are hosted in GitHub. That is why it is important to have proper tooling for delivering DApps.
 
-.. image:: assets/github-actions.jpg
+.. image:: ../assets/github-actions.jpg
     :width: 200px
     :align: center
 
@@ -29,7 +29,7 @@ Step 1: Create pipeline
 
 Open GitHub repository -> Actions -> `New Workflow` -> `Set up a workflow yourself`
 
-.. image:: assets/create-pipeline.png
+.. image:: ../assets/create-pipeline.png
     :align: center
 
 Step 2: Modify pipeline

@@ -3,7 +3,7 @@
 ENS
 ===
 
-.. image:: assets/ens.png
+.. image::  ../assets/ens.png
     :width: 280px
     :align: center
 
@@ -27,7 +27,7 @@ In your browser, go to `app.ens.domains <https://app.ens.domains>`_
 
 Step 3: Search for your desired .eth name
 *****************************************
-.. image:: assets/eth-ens.jpg
+.. image::  ../assets/eth-ens.jpg
     :align: center
 
 Step 4: Start the registration process
@@ -46,7 +46,7 @@ Step 7: Set Relosver
 ********************
 After registration is completed you need to set Resolver.
 
-.. image:: assets/eth-resolver-ens.png
+.. image::  ../assets/eth-resolver-ens.png
     :align: center
 
 Setup pipeline with .ETH update
@@ -84,7 +84,7 @@ Secrets
 
 In order to manage sercerts in a repository you need to open Settings -> Secrets
 
-.. image:: assets/github-secrets.png
+.. image::  ../assets/github-secrets.png
     :align: center
 
 Pipeline
@@ -133,12 +133,12 @@ Run pipeline
 
 The pipeline will run immediately after commit (if you committed to master branch)
 
-.. image:: assets/github-pipeline.png
+.. image::  ../assets/github-pipeline.png
     :align: center
 
 You can open all pipeline runs and check outputs
 
-.. image:: assets/github-pipeline-details.png
+.. image::  ../assets/github-pipeline-details.png
     :align: center
 
 How to access a DApp with .ETH name?
@@ -151,7 +151,7 @@ Check ENS record
 
 In order to check updated IPFS hash in ENS, you need to open https://app.ens.domains
 
-.. image:: assets/ens-domain.png
+.. image::  ../assets/ens-domain.png
     :align: center
 
 Access DApp
@@ -159,5 +159,5 @@ Access DApp
 
 The easiest way to open your DApp through http://eth.link
 
-.. image:: assets/eth-access.png
+.. image::  ../assets/eth-access.png
     :align: center

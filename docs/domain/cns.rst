@@ -3,7 +3,7 @@
 CNS
 ===
 
-.. image:: assets/ud.png
+.. image::  ../assets/ud.png
     :width: 280px
     :align: center
 
@@ -30,35 +30,35 @@ In your browser, go to `unstoppabledomains.com <https://unstoppabledomains.com>`
 Step 3: Pass sign up process
 ****************************
 
-.. image:: assets/ud-signup.png
+.. image::  ../assets/ud-signup.png
     :align: center
 
 Step 4: Search for your desired .crypto name
 ********************************************
 Login and search for `.crypto` name
 
-.. image:: assets/ud-search.png
+.. image::  ../assets/ud-search.png
     :align: center
 
 Step 5: Checkout
 ****************
 Add `.crypto` name to a cart and go to Checkout page. Choose a suitable payment type and complete payment
 
-.. image:: assets/ud-checkout.png
+.. image::  ../assets/ud-checkout.png
     :align: center
 
 Step 6: Connect Wallet to your account
 **************************************
 Go to Account Settings page and click `Add wallet` button. You need to connect your MetaMask account to the web site in an appeared popup.
 
-.. image:: assets/ud-wallet.png
+.. image::  ../assets/ud-wallet.png
     :align: center
 
 Step 7: Claim your domain name
 ******************************
 Go to My Domains page, select domain name and click `Claim`
 
-.. image:: assets/ud-claim.png
+.. image::  ../assets/ud-claim.png
     :align: center
 
 The process takes time, there is manual approval. You will need to wait for a while.
@@ -67,7 +67,7 @@ Step 8: Manage domain name
 **************************
 After all you will be able to manage your domains. Go to My Domains page and click `Manage` button for the domain name.
 
-.. image:: assets/ud-manage.png
+.. image::  ../assets/ud-manage.png
     :align: center
 
 Step 9: Set Resolver
@@ -107,7 +107,7 @@ Secrets
 *******
 In order to manage sercerts in a repository you need to open Settings -> Secrets
 
-.. image:: assets/github-secrets.png
+.. image::  ../assets/github-secrets.png
     :align: center
 
 Pipeline
@@ -154,12 +154,12 @@ Run pipeline
 ************
 The pipeline will run immediately after commit (if you committed to master branch)
 
-.. image:: assets/github-pipeline.png
+.. image::  ../assets/github-pipeline.png
     :align: center
 
 You can open all pipeline runs and check outputs
 
-.. image:: assets/github-pipeline-details.png
+.. image::  ../assets/github-pipeline-details.png
     :align: center
 
 How to access a DApp with .CRYPTO name?
@@ -169,7 +169,7 @@ Check CNS record
 ****************
 In order to check updated IPFS hash in CNS, you need to open My Domains page, click `Manage` button for the domain name. Then you need to open `Website` tab.
 
-.. image:: assets/ud-ipfs-record.png
+.. image::  ../assets/ud-ipfs-record.png
     :align: center
 
 Access DApp
@@ -177,5 +177,5 @@ Access DApp
 1. You should install `Chrome Extension <https://unstoppabledomains.com/extension>`_. The Extension allows Chrome browser to handle `.crypto` domain names.
 2. Type `.crypto` (e.g. ddns-action.crypto) domain name in Chrome browser and you will be redirected to the DApp
 
-.. image:: assets/crypto-access.png
+.. image::  ../assets/crypto-access.png
     :align: center

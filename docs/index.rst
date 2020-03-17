@@ -17,26 +17,8 @@ Web3 is our nearest future which is still under construction.
    :maxdepth: 3
 
    delivery/index.rst
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Hosting
-
-   decentralised-storage
-   ipfs
-   swarm
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Domain names
-
-   ens
-   cns
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Read more
-
+   hosting/index.rst
+   domain/index.rst
    references
 
 Contents:

@@ -12,7 +12,7 @@ There is a `GitHub Action <https://github.com/marketplace/actions/upload-to-swar
 
 In order to use it, you need to add step to `main.yml`::
 
-    - uses: aquiladev/swarm-action@v0.1.1
+    - uses: aquiladev/swarm-action@v0.1
       id: upload
       with:
         path: ./build
