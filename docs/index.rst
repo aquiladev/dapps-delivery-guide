@@ -5,6 +5,10 @@ DApps Delivery Guide
 
 The guide covers the delivery process of DApps.
 
+.. image::  assets/dapps-pipeline.png
+    :width: 380px
+    :align: center
+
 Web2 epoch
 ----------
 We use to use DevOps tools and Internet infrastructure for Web Apps delivery. Everybody knows a number of hosting providers and domain name providers, including CI/CD services that allow achieving our needs in Web App delivery. In the guide, we would cover how we can use Web2 infrastructure and tools for Web3 applications.
