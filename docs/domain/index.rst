@@ -4,7 +4,7 @@ Domain names
 ============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    ens
    cns
