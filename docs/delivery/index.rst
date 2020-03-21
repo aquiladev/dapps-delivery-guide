@@ -7,3 +7,4 @@ Delivery tools
    :maxdepth: 3
 
    github-actions
+   terminal
