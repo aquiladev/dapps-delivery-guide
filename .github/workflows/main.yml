@@ -57,7 +57,7 @@ jobs:
         timeout: 180000
 
     - name: Update CNS
-      uses: aquiladev/ddns-action@v0.1.2-beta
+      uses: aquiladev/ddns-action@v0.1.2-gamma
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
@@ -73,7 +73,7 @@ jobs:
         verbose: true
     
     - name: Update ENS
-      uses: aquiladev/ddns-action@v0.1.2-beta
+      uses: aquiladev/ddns-action@v0.1.2-gamma
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
