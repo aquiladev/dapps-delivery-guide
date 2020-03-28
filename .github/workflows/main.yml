@@ -63,7 +63,6 @@ jobs:
         rpc: ${{ secrets.RPC }}
         name: ddns-action.crypto
         contentHash: ${{ steps.ipfs.outputs.hash }}
-        dryRun: true
         verbose: true
     
     - name: Upload to Swarm
@@ -81,6 +80,5 @@ jobs:
         name: ddns-action.eth
         contentHash: ${{ steps.swarm.outputs.hash }}
         contentType: 'swarm-ns'
-        dryRun: true
         verbose: true
 
