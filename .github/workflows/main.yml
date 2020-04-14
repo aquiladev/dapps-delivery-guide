@@ -47,6 +47,13 @@ jobs:
         $output = '${{ steps.block.outputs.output }}' | ConvertFrom-Json
         ($env:REACT_APP_BLOCK = "$($output.data.result)") -and (npm run build)
       shell: pwsh
+  
+    - name: Upload to IPFS
+      uses: aquiladev/ipfs-action@v0.1.2-alpha.0
+      id: ipfs
+      with:
+        path: ./build
+        verbose: true
     
     - name: Upload to Swarm
       uses: aquiladev/swarm-action@v0.0.1-alpha
