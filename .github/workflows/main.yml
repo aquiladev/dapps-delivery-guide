@@ -55,19 +55,11 @@ jobs:
         path: ./build
         verbose: true
     
-    - name: Upload to Swarm
-      uses: aquiladev/swarm-action@v0.0.1-alpha
-      id: swarm
-      with:
-        path: ./build
-        verbose: true
-    
     - name: Update ENS
       uses: aquiladev/ddns-action@v0.1.2-gamma
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
         name: ddns-action.eth
-        contentHash: ${{ steps.swarm.outputs.hash }}
-        contentType: 'swarm-ns'
+        contentHash: ${{ steps.ipfs.outputs.hash }}
         verbose: true
