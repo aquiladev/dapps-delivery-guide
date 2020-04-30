@@ -62,4 +62,5 @@ jobs:
         rpc: ${{ secrets.RPC }}
         name: ddns-action.eth
         contentHash: ${{ steps.ipfs.outputs.hash }}
+        dryrun: false
         verbose: true
