@@ -61,6 +61,7 @@ jobs:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
         name: ddns-action.eth
+        contentType: 'swarm-ns'
         contentHash: ${{ steps.swarm.outputs.hash }}
         dryrun: false
         verbose: true
