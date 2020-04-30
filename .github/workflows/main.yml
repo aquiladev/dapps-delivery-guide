@@ -56,7 +56,7 @@ jobs:
         verbose: true
     
     - name: Update ENS
-      uses: aquiladev/ddns-action@v0.1.2-gamma
+      uses: aquiladev/ddns-action@v0.1.0
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
