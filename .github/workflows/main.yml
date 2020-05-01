@@ -63,11 +63,11 @@ jobs:
         name: ddns-action.eth
         contentType: 'swarm-ns'
         contentHash: ${{ steps.swarm.outputs.hash }}
-        dryrun: false
+        dryrun: true
         verbose: true
     
     - name: Upload to IPFS
-      uses: aquiladev/ipfs-action@v0.1.2-alpha
+      uses: aquiladev/ipfs-action@v0.1.2
       id: ipfs
       with:
         path: ./build
@@ -81,5 +81,5 @@ jobs:
         rpc: ${{ secrets.RPC }}
         name: ddns-action.crypto
         contentHash: ${{ steps.ipfs.outputs.hash }}
-        dryrun: false
+        dryrun: true
         verbose: true
