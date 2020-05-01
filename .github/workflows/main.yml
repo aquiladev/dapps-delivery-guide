@@ -56,7 +56,7 @@ jobs:
         verbose: true
     
     - name: Update ENS
-      uses: aquiladev/ddns-action@v0.1.2-delta
+      uses: aquiladev/ddns-action@v0.1.2
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
@@ -75,11 +75,11 @@ jobs:
         timeout: 180000
 
     - name: Update CNS
-      uses: aquiladev/ddns-action@v0.1.2-delta
+      uses: aquiladev/ddns-action@v0.1.2
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
         name: ddns-action.crypto
         contentHash: ${{ steps.ipfs.outputs.hash }}
-        dryrun: true
+        dryrun: false
         verbose: true
