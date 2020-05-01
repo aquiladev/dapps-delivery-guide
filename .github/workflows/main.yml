@@ -49,7 +49,7 @@ jobs:
       shell: pwsh
   
     - name: Upload to Swarm
-      uses: aquiladev/swarm-action@v0.0.1-alpha
+      uses: aquiladev/swarm-action@v0.1.1
       id: swarm
       with:
         path: ./build
