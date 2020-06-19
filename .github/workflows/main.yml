@@ -90,6 +90,6 @@ jobs:
         mnemonic: ${{ secrets.MNEMONIC }}
         rpc: ${{ secrets.RPC }}
         name: ddns-action.crypto
-        contentHash: ${{ steps.ipfs.outputs.hash }}
+        contentHash: ${{ steps.pinata.outputs.hash }}
         dryrun: true
         verbose: true
