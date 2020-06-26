@@ -26,3 +26,20 @@ In order to use it, you need to add step to `main.yml`::
 There will be a build artifact on a runner after `steps <github-actions.html#basic-pipeline-for-a-dapp>`_ (usually in directory `build` or `dist`). You need to pass the directory as a `path` parameter.
 
 The step will have `hash` output — it is needed for later use. Token `${{ steps.upload.outputs.hash }}` can be used in next steps where `upload` is the id of current step.
+
+Upload to IPFS Pinata pinning service
+-------------------------------------
+
+The same GitHub Action allows to upload a DApp to `Pinata <https://pinata.cloud/>`_ pinning service. Pinata simplifies immutable data with simple IPFS API and toolkit.
+
+In order to use it, you need to add step to `main.yml`::
+
+    - uses: aquiladev/ipfs-action@v0.1.3
+      id: pinata
+      with:
+        path: ./build
+        service: pinata
+        pinataKey: ${{ secrets.PINATA_KEY }}
+        pinataSecret: ${{ secrets.PINATA_SECRET }}
+
+The output of the upload action is similar to the previous example.
