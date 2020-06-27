@@ -82,7 +82,7 @@ jobs:
       with:
         path: ./build
         service: infura
-        timeout: 180000
+        timeout: 120000
         verbose: true
 
     - name: Upload to IPFS
