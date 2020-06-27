@@ -75,7 +75,15 @@ jobs:
         pinataKey: ${{ secrets.PINATA_KEY }}
         pinataSecret: ${{ secrets.PINATA_SECRET }}
         verbose: true
-  
+
+    - name: Upload to Infura
+      uses: aquiladev/ipfs-action@v0.1.4-alpha.0
+      id: infura
+      with:
+        path: ./build
+        service: infura
+        verbose: true
+
     - name: Upload to IPFS
       uses: aquiladev/ipfs-action@v0.1.3
       id: ipfs
