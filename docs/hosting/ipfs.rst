@@ -16,6 +16,31 @@ Upload to IPFS
 
 There is a `GitHub Action <https://github.com/marketplace/actions/upload-to-ipfs>`_ which allows to upload a DApp to IPFS on Marketplace.
 
+Input parameters:
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| Parameter     | Required   | Service | Description                                                                                       |
++===============+============+=========+===================================================================================================+
+| path          | Yes        |         | Directory's path to upload.                                                                       |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| service       | No         |         | Type of target service to upload. Supported services [`ipfs`, `pinata`, `infura`]. Default `ipfs` |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| timeout       | No         |         | Request timeout. Default `60000` (1 minute)                                                       |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| verbose       | No         |         | Level of verbosity [`false` - quiet, `true` - verbose]. Default `false`                           |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| host          | No         | ipfs    | IPFS host. Default `ipfs.komputing.org`                                                           |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| port          | No         | ipfs    | IPFS host's port. Default `443`                                                                   |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| protocol      | No         | ipfs    | IPFS host's protocol. Default `https`                                                             |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| pinataKey     | Yes*       | pinata  | Pinata Api Key. Required for pinata service.                                                      |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| pinataSecret  | Yes*       | pinata  | Pinata Secret Api Key. Required for pinata service.                                               |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+| pinataPinName | No         | pinata  | Human name for pin.                                                                               |
++---------------+------------+---------+---------------------------------------------------------------------------------------------------+
+
 In order to use it, you need to add step to `main.yml`::
 
     - uses: aquiladev/ipfs-action@v0.1.1
@@ -41,5 +66,6 @@ In order to use it, you need to add step to `main.yml`::
         service: pinata
         pinataKey: ${{ secrets.PINATA_KEY }}
         pinataSecret: ${{ secrets.PINATA_SECRET }}
+        pinataPinName: {pin_name}
 
 The output of the upload action is similar to the previous example.
