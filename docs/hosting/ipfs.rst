@@ -17,6 +17,7 @@ Upload to IPFS
 There is a `GitHub Action <https://github.com/marketplace/actions/upload-to-ipfs>`_ which allows to upload a DApp to IPFS on Marketplace.
 
 Input parameters:
+
 +---------------+------------+---------+---------------------------------------------------------------------------------------------------+
 | Parameter     | Required   | Service | Description                                                                                       |
 +===============+============+=========+===================================================================================================+
