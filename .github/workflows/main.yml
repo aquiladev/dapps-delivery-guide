@@ -70,13 +70,14 @@ jobs:
         verbose: true
     
     - name: Upload to Pinata
-      uses: aquiladev/ipfs-action@v0.1.5-alpha.0
+      uses: aquiladev/ipfs-action@v0.1.5
       id: pinata
       with:
         path: ./build
         service: pinata
         pinataKey: ${{ secrets.PINATA_KEY }}
         pinataSecret: ${{ secrets.PINATA_SECRET }}
+        pinataPinName: dapps-delivery-guide
         verbose: true
 
     - name: Upload to Infura
