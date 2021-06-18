@@ -79,9 +79,9 @@ jobs:
         pinataSecret: ${{ secrets.PINATA_SECRET }}
         pinataPinName: dapps-delivery-guide
         verbose: true
-    
+
     - name: Echo
-      run: echo ${{ steps.ipfs.outputs.hash }}
+      run: echo ${{ steps.pinata.outputs.hash }}
 
     - name: Upload to Infura
       uses: aquiladev/ipfs-action@master
@@ -92,6 +92,9 @@ jobs:
         timeout: 120000
         verbose: true
 
+    - name: Echo
+      run: echo ${{ steps.infura.outputs.hash }}
+
     - name: Upload to IPFS
       uses: aquiladev/ipfs-action@v0.1.6-0
       id: ipfs
@@ -99,6 +102,9 @@ jobs:
         path: ./build
         verbose: true
         timeout: 180000
+
+    - name: Echo
+      run: echo ${{ steps.ipfs.outputs.hash }}
 
     - name: Update CNS
       uses: aquiladev/ddns-action@v0.1.2
