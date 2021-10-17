@@ -58,6 +58,9 @@ jobs:
         path: ./build
         verbose: true
     
+    - name: Echo
+      run: echo ${{ steps.swarm.outputs.hash }}
+    
     - name: Update ENS
       uses: aquiladev/ddns-action@v0.1.2
       with:
@@ -82,6 +85,17 @@ jobs:
 
     - name: Echo
       run: echo ${{ steps.pinata.outputs.hash }}
+    
+    - name: Update ENS (Rinkeby)
+      uses: aquiladev/ddns-action@v0.2.0-0
+      with:
+        mnemonic: ${{ secrets.RINKEBY_MNEMONIC }}
+        rpc: ${{ secrets.RINKEBY_RPC }}
+        name: ddns-action.eth
+        contentType: 'ipfs-ns'
+        contentHash: ${{ steps.pinata.outputs.hash }}
+        dryrun: false
+        verbose: true
 
     - name: Upload to Infura
       uses: aquiladev/ipfs-action@master
