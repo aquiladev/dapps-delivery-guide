@@ -120,12 +120,22 @@ jobs:
     - name: Echo
       run: echo ${{ steps.ipfs.outputs.hash }}
 
-    - name: Update CNS
-      uses: aquiladev/ddns-action@v0.1.2
+    - name: Update CNS (Rinkeby)
+      uses: aquiladev/ddns-action@v0.2.0-1
       with:
         mnemonic: ${{ secrets.MNEMONIC }}
-        rpc: ${{ secrets.RPC }}
+        rpc: ${{ secrets.RINKEBY_RPC }}
         name: ddns-action.crypto
         contentHash: ${{ steps.ipfs.outputs.hash }}
-        dryrun: true
+        dryrun: false
+        verbose: true
+
+    - name: Update UNS (Rinkeby)
+      uses: aquiladev/ddns-action@v0.2.0-1
+      with:
+        mnemonic: ${{ secrets.MNEMONIC }}
+        rpc: ${{ secrets.RINKEBY_RPC }}
+        name: ddns-action.x
+        contentHash: ${{ steps.ipfs.outputs.hash }}
+        dryrun: false
         verbose: true
