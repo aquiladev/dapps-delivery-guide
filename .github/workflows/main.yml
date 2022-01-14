@@ -116,7 +116,7 @@ jobs:
         path: ./build
         key: 'dapps-delivery-guide'
         verbose: true
-        timeout: 180000
+        timeout: 300000
 
     - name: Echo
       run: echo ${{ steps.ipfs.outputs.hash }}
