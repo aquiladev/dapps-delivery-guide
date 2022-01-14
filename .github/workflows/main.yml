@@ -110,11 +110,11 @@ jobs:
       run: echo ${{ steps.infura.outputs.hash }}
 
     - name: Upload to IPFS
-      uses: aquiladev/ipfs-action@v0.2.0-alpha.4
+      uses: aquiladev/ipfs-action@v0.2.0-alpha.5
       id: ipfs
       with:
         path: ./build
-        key: 'dapps-delivery-guide-1'
+        key: 'dapps-delivery-guide-2'
         verbose: true
         timeout: 180000
 
