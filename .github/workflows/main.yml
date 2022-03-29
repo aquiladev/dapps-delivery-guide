@@ -110,7 +110,7 @@ jobs:
       run: echo ${{ steps.infura.outputs.hash }}
 
     - name: Upload to IPFS
-      uses: aquiladev/ipfs-action@v0.2.1-alpha.4
+      uses: aquiladev/ipfs-action@v0.2.1-alpha.5
       id: ipfs
       with:
         path: ./build
