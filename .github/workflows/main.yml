@@ -51,12 +51,12 @@ jobs:
         ($env:REACT_APP_BLOCK = "$($output.data.result)") -and (npm run build)
       shell: pwsh
   
-    - name: Upload to Swarm
-      uses: aquiladev/swarm-action@v0.1.1
-      id: swarm
-      with:
-        path: ./build
-        verbose: true
+#    - name: Upload to Swarm
+#      uses: aquiladev/swarm-action@v0.1.1
+#      id: swarm
+#      with:
+#        path: ./build
+#        verbose: true
     
     - name: Echo
       run: echo ${{ steps.swarm.outputs.hash }}
