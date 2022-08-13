@@ -57,20 +57,20 @@ jobs:
 #      with:
 #        path: ./build
 #        verbose: true
-    
-    - name: Echo
-      run: echo ${{ steps.swarm.outputs.hash }}
-    
-    - name: Update ENS
-      uses: aquiladev/ddns-action@v0.1.2
-      with:
-        mnemonic: ${{ secrets.MNEMONIC }}
-        rpc: ${{ secrets.RPC }}
-        name: ddns-action.eth
-        contentType: 'swarm-ns'
-        contentHash: ${{ steps.swarm.outputs.hash }}
-        dryrun: true
-        verbose: true
+#    
+#    - name: Echo
+#      run: echo ${{ steps.swarm.outputs.hash }}
+#    
+#    - name: Update ENS
+#      uses: aquiladev/ddns-action@v0.1.2
+#      with:
+#        mnemonic: ${{ secrets.MNEMONIC }}
+#        rpc: ${{ secrets.RPC }}
+#        name: ddns-action.eth
+#        contentType: 'swarm-ns'
+#        contentHash: ${{ steps.swarm.outputs.hash }}
+#        dryrun: true
+#        verbose: true
     
     - name: Upload to Pinata
       uses: aquiladev/ipfs-action@vercel/ncc
