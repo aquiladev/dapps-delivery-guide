@@ -98,7 +98,7 @@ jobs:
 #        verbose: true
 
     - name: Upload to Infura
-      uses: aquiladev/ipfs-action@0.3.0-alpha.1
+      uses: aquiladev/ipfs-action@v0.3.0-alpha.1
       id: infura
       with:
         path: ./build
