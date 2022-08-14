@@ -98,11 +98,13 @@ jobs:
         verbose: true
 
     - name: Upload to Infura
-      uses: aquiladev/ipfs-action@master
+      uses: aquiladev/ipfs-action@infura-project
       id: infura
       with:
         path: ./build
         service: infura
+        infuraProjectId: ${{ secrets.INFURA_IPFS_PROJECT_ID }}
+        infuraProjectSecret: ${{ secrets.INFURA_IPFS_PROJECT_SECRET }}
         timeout: 120000
         verbose: true
 
