@@ -98,7 +98,7 @@ jobs:
 #        verbose: true
 
     - name: Upload to Infura
-      uses: aquiladev/ipfs-action@infura-project
+      uses: aquiladev/ipfs-action@0.3.0-alpha.1
       id: infura
       with:
         path: ./build
@@ -112,7 +112,7 @@ jobs:
       run: echo ${{ steps.infura.outputs.hash }}
 
     - name: Upload to IPFS
-      uses: aquiladev/ipfs-action@v0.2.1-alpha.5
+      uses: aquiladev/ipfs-action@v0.3.0-alpha.1
       id: ipfs
       with:
         path: ./build
