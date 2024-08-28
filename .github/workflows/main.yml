@@ -80,7 +80,7 @@ jobs:
         service: pinata
         pinataKey: ${{ secrets.PINATA_KEY }}
         pinataSecret: ${{ secrets.PINATA_SECRET }}
-        pinataPinName: dapps-delivery-guide
+        pinName: dapps-delivery-guide
         verbose: true
 #
 #    - name: Echo
